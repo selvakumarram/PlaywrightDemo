@@ -13,7 +13,7 @@ describe("inTech Session Demo on Playwright", () => {
 
         //without input type File tag
         await page.on('filechooser', async (filechooser) => {
-            await filechooser.setFiles("./screenshots/firefox.png");
+            await filechooser.setFiles("./screenshots/chromium.png");
         })
         await page.click('#drag-drop-upload', { force: true });
     })
