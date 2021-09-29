@@ -26,25 +26,18 @@ describe("inTech Session Demo on Playwright", () => {
         reporter.endStep();
         reporter.startStep("Enter UserName");
         await page.fill('input#emailFieldNext', 'nitin.n1@do79.com');
-        const userNameImage = await page.screenshot();
-        reporter.addAttachment("EnterUserName", userNameImage, "image/png");
         reporter.endStep();
         reporter.startStep("Click On Next Button");
         await page.click('button#nextBtn');
         reporter.endStep();
         reporter.startStep("Enter Password");
         await page.fill('input#mfaPassField', 'India123');
-        const passwordImage = await page.screenshot();
-        reporter.addAttachment("EnterPassword", passwordImage, "image/png");
         reporter.endStep();
         reporter.startStep("Click On Sign In");
         await Promise.all([
             page.waitForNavigation(),
             page.click('[aria-label="Sign In"]')
         ]);
-        const homeImage = await page.screenshot();
-        reporter.addAttachment("HomeScreen", homeImage, "image/png");
         reporter.endStep();
-
     });
 })
