@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
@@ -12,8 +12,10 @@
   "devDependencies": {
     "@types/jest": "^27.0.0",
     "jest": "^27.0.6",
+    "jest-allure": "^0.1.3",
     "jest-playwright-preset": "^1.7.0",
     "playwright": "^1.14.0",
+    "@playwright/test": "^1.15.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.3.5"
   },
@@ -21,6 +23,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "testRunner": "jasmine2",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -29,6 +32,9 @@
       "json",
       "node"
     ],
-    "testTimeout": 120000
+    "testTimeout": 120000,
+    "setupFilesAfterEnv": [
+      "jest-allure/dist/setup"
+    ]
   }
 }
