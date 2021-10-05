@@ -9,8 +9,8 @@ describe("inTech Session Demo on Playwright", () => {
         await context.tracing.start({ screenshots: true, snapshots: true });
         const page = await context.newPage();
         try {
-            await page.goto("https://na1.dev.nice-incontact.com/login/");
-            await page.fill('input#emailFieldNext', 'nitin.n1@do79.com');
+            await page.goto("https://na1.staging.nice-incontact.com/login/");
+            await page.fill('input#emailFieldNext', 'nitin.nazare@so32.com');
             await page.click('button#nextBtn');
             await page.fill('input#mfaPassField', 'India123');
             await Promise.all([

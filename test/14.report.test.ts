@@ -22,10 +22,10 @@ describe("inTech Session Demo on Playwright", () => {
 
     test('Allure report Test', async () => {
         reporter.startStep("Nvaigate to Url");
-        await page.goto("https://na1.dev.nice-incontact.com/login/");
+        await page.goto("https://na1.staging.nice-incontact.com/login/");
         reporter.endStep();
         reporter.startStep("Enter UserName");
-        await page.fill('input#emailFieldNext', 'nitin.n1@do79.com');
+        await page.fill('input#emailFieldNext', 'nitin.nazare@so32.com');
         reporter.endStep();
         reporter.startStep("Click On Next Button");
         await page.click('button#nextBtn');
